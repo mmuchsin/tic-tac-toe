@@ -7,19 +7,17 @@ const initialBoard = [
 export default function GameBoard() {
   return (
     <ol id="game-board">
-      {initialBoard.map((row, rowIndex) => {
-        return (
+      {initialBoard.map((row, rowIndex) => (
         <li key={rowIndex}>
           <ol>
-            {row.map((col, colIndex) => {
-              return (
+            {row.map((col, colIndex) => (
               <li key={colIndex}>
                 <button>{col}</button>
-              </li>);
-            })}
+              </li>
+      ))}
           </ol>
-        </li>);
-      })}
+        </li>
+     ))}
     </ol>
   );
 }
